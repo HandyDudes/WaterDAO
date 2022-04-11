@@ -1,0 +1,47 @@
+WaterDAO addr(DropERC1155)Script-1:
+0xA6966D1A9E42B36E4f9f412c7Cc07D951Ac100E9
+
+voting VoteERC20 addr:
+0x935a9819990e389ffb8643F2652FE81b1047d6B3
+
+Governance TokenERC20 Script-5 addr:
+0x9C5163d4F5138ff193ca42774cCd2A0Cc843ceB2
+
+Token Proxy Module addr:
+0x9BEA06288D4102d31D3Cd0aA2Df3F29A566407BD
+
+script 2  deploy-drop
+Successfully deployed editionDrop contract, address: 0xA6966D1A9E42B36E4f9f412c7Cc07D951Ac100E9
+editionDrop metadata: {
+  name: 'WaterDAO Membership',
+  image: 'https://gateway.ipfscdn.io/ipfs/QmUsBHwweb5pE9VkKxiUbJzfnEsEbMuuwbjxfPqokdUeWy/0'
+  
+script 3 config-nft
+✅ Successfully created a new NFT in the drop!
+
+script 4 set-claim-condition
+✅ Sucessfully set claim condition!
+
+script 5 deploy-token
+Remote contractName : TokenERC20
+Deploying token proxy
+token proxy deployed successfully
+✅ Successfully deployed token module, address: 0x9BEA06288D4102d31D3Cd0aA2Df3F29A566407BD
+
+script 6 print-money
+✅ There now is 10000.0 $H2O in circulation
+
+script 7 airdrop-token
+✅ Going to airdrop 580 tokens to 0x3d5A774120596fAbA97F2aE6Ee07c8c69B6a398e
+🌈 Starting airdrop...
+✅ Successfully airdropped tokens to all the holders of the NFT!
+
+Script 8 deploy-vote
+Remote contractName : VoteERC20
+Deploying vote proxy
+vote proxy deployed successfully
+✅ Successfully deployed vote contract, address: 0x935a9819990e389ffb8643F2652FE81b1047d6B3
+
+script 9 setup-vote
+Successfully gave vote contract permissions to act on token contract
+failed to transfer tokens to vote contract Error: call revert exception [ See: https://links.ethers.org/v5-errors-CALL_EXCEPTION ] (method="balanceOf(address)", errorArgs=null, errorName=null, errorSignature=null, reason=null, code=CALL_EXCEPTION, version=abi/5.6.0)
